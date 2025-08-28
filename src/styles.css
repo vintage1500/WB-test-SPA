@@ -1,0 +1,168 @@
+:root {
+    --bg: #0b0e11;
+    --card: #11151a;
+    --muted: #8a95a4;
+    --text: #e6edf3;
+    --accent: #7cb8ff;
+    --accent-2: #34d399;
+    --border: #1c222b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    background: linear-gradient(180deg, #0b0e11 0%, #0b0e11 50%, #0e141b 100%);
+    color: var(--text);
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.navbar {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(6px);
+    z-index: 10;
+}
+
+.brand {
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.navlink {
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+.navlink.active {
+    background: var(--card);
+    border-color: var(--border);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+@media (min-width: 900px) {
+    .grid {
+        grid-template-columns: 1.2fr 1fr;
+    }
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card h2,
+.card h3 {
+    margin-top: 0;
+}
+
+.row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.input,
+select {
+    background: #0e1217;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 8px 10px;
+    border-radius: 10px;
+}
+
+.btn {
+    background: #0e1217;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: #0b0e11;
+    border-color: transparent;
+}
+
+.btn.secondary {
+    background: var(--accent-2);
+    color: #041311;
+    border-color: transparent;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+}
+
+th {
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.spacer {
+    flex: 1;
+}
+
+.footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--muted);
+} 
